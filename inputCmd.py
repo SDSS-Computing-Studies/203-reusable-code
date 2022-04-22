@@ -22,8 +22,7 @@ def inputIntV2(question):
   while True:
     inp = input(question)
     for i in inp:
-        valid = "1234567890"
-        if valid.find(i):
+        if i not in "1234567890":  
             print("invalid entry for an integer")
             break
     else:
@@ -34,3 +33,4 @@ def inputIntV2(question):
 
 x = inputIntV2("Enter an integer")
 x = int(x)
+print(f"Your integer is {x}")
